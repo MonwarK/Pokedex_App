@@ -16,10 +16,18 @@ const PokemonNavigation = ({ detail }) => {
         },
       }}
     >
-      <Tab.Screen name="About" component={() => <AboutScreen detail={detail} />} />
-      <Tab.Screen name="BaseStats" options={{ title: "Base Stats" }} component={() => <BaseStatsScreen detail={detail} />} />
-      <Tab.Screen name="Evolution" component={() => <EvolutionScreen detail={detail} />} />
-      <Tab.Screen name="Moves" component={() => <MovesScreen detail={detail} />} />
+      <Tab.Screen name="About">
+        {() => <AboutScreen detail={detail} /> }
+      </Tab.Screen>
+      <Tab.Screen name="BaseStats"  options={{ title: "Base Stats" }}>
+        {() => <BaseStatsScreen detail={detail} /> }
+      </Tab.Screen>
+      <Tab.Screen name="Evolution">
+        {() => <EvolutionScreen detail={detail} /> }
+      </Tab.Screen>
+      <Tab.Screen name="Moves">
+        {() => <MovesScreen detail={detail} /> }
+      </Tab.Screen>
     </Tab.Navigator>
   )
 }

@@ -25,8 +25,7 @@ const AppNavigation = () => {
         name="PokemonInfo" 
         component={PokemonInfoScreen} 
         options={{
-          headerTitle: null,
-          headerBackTitle: null,
+          headerShown: false
         }}
       />
     </Stack.Navigator>

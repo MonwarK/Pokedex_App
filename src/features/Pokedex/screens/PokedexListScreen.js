@@ -16,6 +16,10 @@ const PokedexListScreen = ({ navigation }) => {
         />
       </View>
     )
+  } else {
+    return (
+      <Text>Loading...</Text>
+    )
   }
   
 }

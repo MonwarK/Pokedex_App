@@ -4,12 +4,12 @@ import { View, Text, TouchableOpacity } from 'react-native'
 import { ListItem, Avatar } from 'react-native-elements'
 
 const PokedexListItem = ({ pokemon, navigation }) => {
-  const [pokemonDetail, setPokemonDetail] = useState()
+  const [pokemonDetail, setPokemonDetail] = useState();
 
   useEffect(() => {
     axios
     .get(pokemon.url)
-    .then((res) => setPokemonDetail(res.data))
+    .then((res) => setPokemonDetail(res.data));
   }, [])
 
   return (
